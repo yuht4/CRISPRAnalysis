@@ -1,0 +1,149 @@
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en_US" xml:lang="en-US">
+    <head>
+        <title> Filter Report </title>
+        <link rel="stylesheet" href="css/report.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $().ready(function(){
+                $('table.plot td img').css({"border-color": "#C1E0FF",
+                    "border-width":"1px",
+                    "border-style":"solid"});
+                   })
+        </script>
+    </head>
+
+    <body>
+        <div class="header"  style="background-color: #eee">
+            <table style="width: 98%">
+                <tr>
+                    <td><img id="logo" src="images/jgi_log_transparent.png" class="logo"></a></td>
+                    <td style="white-space: nowrap; text-align: left"><span class="title"> Filter Report</span></td>
+                    <td style="width: 100%">
+                        <table style="width: 100%; font-weight: bold">
+                            <tr><td style="white-space: nowrap; width: 100%; text-align: right;">[_INPUT-FILE-NAME_]</td></tr>
+                            <tr><td style="white-space: nowrap; width: 100%; text-align: right">[_REPORT-DATE_]</td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="padding: 10px">
+            <div class="section">
+                <table class='data'>
+                    <tr>
+                        <th></th>
+                        <th>Number of Reads	</th>
+                        <th>File Size</th>
+                        <th>File Location</th>
+                    </tr>
+                    <tr>
+                        <th>Raw FASTQ</th>
+                        <td>[_RAW-READ-CNT_]</td>
+                        <td>[_RAW-FILE-SIZE_] MB</td>
+                        <td>[_RAW-FILE-LOCATION_]</td>
+                    </tr>
+
+                    <tr>
+                        <th>Filtered FASTQ</th>
+                        <td>[_FILTERED-READ-CNT_]</td>
+                        <td>[_FILTERED-FILE-SIZE_] MB</td>
+                        <td>[_FILTERED-FILE-LOCATION_]</td>
+                    </tr>
+                    <tr>
+                        <th>Filtered %</th>
+                        <td>[_REMOVED-READ-PCT_]%</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <h2 class="section-title"> Filtering Stats </h2>
+            <div class="section">
+                <table class='hori, border, data'>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Read Count</th>
+                        <th>Base Count</th>
+                    </tr>
+                    <tr>
+                        <th>Input</th>
+                        <td>[_RAW-READ-CNT_]</td>
+                        <td>[_RAW-BASE-CNT_]</td>
+                    </tr>
+
+                    <tr>
+                        <th>Remaining</th>
+                        <td>[_FILTERED-READ-CNT_]</td>
+                        <td>[_FILTERED-BASE-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Percentage Removed</th>
+                        <td>[_REMOVED-READ-PCT_]</td>
+                        <td>[_REMOVED-BASE-PCT_]</td>
+                    </tr>
+                </table>
+            </div>
+
+            <br />
+            <div class="section">
+                <ul>
+                        <li>Filter log: filter.log (29.7 KB)</li>
+                        <li>Filter Text Report: filter.txt (878.0 bytes)</li>
+                        <li>Filter Metadata Json File: metadata.json (1.5 KB)</li>
+                </ul>
+                <table class='data'>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Percent	</th>
+                        <th>Read Count</th>
+                    </tr>
+                    <tr>
+                        <th>Low Quality Removed</th>
+                        <td>[_LOW-QUAL-REMOVED-PCT_]</td>
+                        <td>[_LOW-QUAL-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Artifact Removed</th>
+                        <td>[_ARTI-REMOVED-PCT_]</td>
+                        <td>[_ARTI-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Ribosomal RNA Removed</th>
+                        <td>[_RRNA-REMOVED-PCT_]</td>
+                        <td>[_RRNA-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Microbial Removed</th>
+                        <td>[_MICROBE-REMOVED-PCT_]</td>
+                        <td>[_MICROBE-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Human Filtered</th>
+                        <td>[_HUMAN-REMOVED-PCT_]</td>
+                        <td>[_HUMAN-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Dog Filtered</th>
+                        <td>[_DOG-REMOVED-PCT_]</td>
+                        <td>[_DOG-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Cat Filtered</th>
+                        <td>[_CAT-REMOVED-PCT_]</td>
+                        <td>[_CAT-REMOVED-READ-CNT_]</td>
+                    </tr>
+                    <tr>
+                        <th>Mouse Filtered</th>
+                        <td>[_MOUSE-REMOVED-PCT_]</td>
+                        <td>[_MOUSE-REMOVED-READ-CNT_]</td>
+                    </tr>
+                </table>
+            </div>
+
+            <br />
+            [_FILTERED-READ-QC_]
+        </div>
+    </body>
+</html>
