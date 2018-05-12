@@ -8,7 +8,6 @@ PREFIX = os.path.split(os.path.realpath(__file__))[0]
 PREFIX.replace('\n', '')
 
 PICARD = PREFIX + "/lib/picard.jar"
-STRELKA = PREFIX + "/lib/strelka/bin/"
 BBMAP = PREFIX + "/lib/bbmap/"
 
 def main():
